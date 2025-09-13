@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kak Bima Official</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f7f4;
+      color: #333;
+    }
+    header {
+      background: #2e7d32;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    /* Burger menu */
+    .burger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 36px;
+      background: #388e3c;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .burger::before {
+      content: "≡";
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .burger:hover {
+      background: #1b5e20;
+    }
+    /* Tombol biasa */
+    nav a {
+      padding: 8px 14px;
+      background: #388e3c;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #1111 ;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 100, 0, 0.7), rgba(0, 50, 0, 0.7)), url("bg.jpg") center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero .logo {
+      width: 220px;       
+      height: auto;
+      margin-bottom: 30px;
+      filter: none;       
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4); 
+      animation: fadeZoom 1.5s ease-out;
+    }
+    @keyframes fadeZoom {
+      0% { opacity: 0; transform: scale(0.7); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      animation: fadeUp 2s ease-out;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      animation: fadeUp 2.5s ease-out;
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section */
+    .gallery, .sosmed, .tentang {
+      padding: 30px 20px;
+    }
+    .gallery h2, .sosmed h2, .tentang h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2e7d32;
+    }
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .photos img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .photos img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Sosial media */
+    .sosmed ul {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .sosmed li {
+      margin: 12px 0;
+      font-size: 16px;
+    }
+    .sosmed a {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #2e7d32;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .sosmed a:hover {
+      background: #1b5e20;
+    }
+    .sosmed i {
+      margin-right: 8px;
+    }
+
+    /* Tentang */
+    .tentang p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1b5e20;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kak Bima Official</h1>
+    <nav>
+      <a href="#kritik">Saran</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#sosmed" class="burger" title="Sosial Media"></a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <img src="logo.png" alt="Logo Kak Bima" class="logo">
+    <h1>Selamat Datang di Website Kak Bima Official</h1>
+    <p>Tempat berbagi cerita, dokumentasi kegiatan, dan media sosial resmi.</p>
+  </section>
+
+
+  <section class="gallery">
+    <div class="photos">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+    </div>
+  </section>
+
+  <!-- Sosial Media -->
+  <section class="sosmed" id="sosmed">
+    <h2>Sosial Media</h2>
+    <ul>
+      <li><a href="https://youtube.com/@kakbimaofficial?si=KuKqVaeeh3j70IXb" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+      <li><a href="https://www.instagram.com/kakbima.id?igsh=YnVyaDI0dWhxeWN1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="https://whatsapp.com/channel/0029VbBHk8O9WtCCix5cPv1x" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+    </ul>
+  </section>
+
+  <!-- Saran & Kritikan -->
+  <section class="sosmed" id="kritik">
+    <h2>Saran & Kritikan</h2>
+    <p style="text-align:center;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSct2HUWwdMufEs2FECw6sU-W0kHmNhw1O70sFp8yN3j2WiC_A/viewform?usp=header" target="_blank">
+        Kirim Saran & Kritikan
+      </a>
+    </p>
+  </section>
+
+  <!-- Tentang -->
+  <section class="tentang" id="tentang">
+    <h2>Tentang</h2>
+    <p>
+      <b>Kak Bima Official</b> adalah akun yang berdiri pada tahun 2024 dan mempunyai akun sebelum tahun tersebut. 
+      Akun tersebut dibuat pada tahun 2023 yang dipegang oleh seorang siswa pengajar dan pengamat 
+      dalam bidang astronomi, biologi, dan kimia.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kak Bima Official. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
